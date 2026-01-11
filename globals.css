@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 0 0% 95%;
+    --card: 210 20% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 210 20% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 200 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 170 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 15% 20%;
+    --input: 210 15% 18%;
+    --ring: 200 80% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 20% 4%;
+    --foreground: 0 0% 95%;
+    --card: 210 20% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 210 20% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 200 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 170 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 15% 20%;
+    --input: 210 15% 18%;
+    --ring: 200 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Custom progress bar colors */
+.progress-lith {
+  background: linear-gradient(90deg, #967259, #c4a484);
+}
+
+.progress-meso {
+  background: linear-gradient(90deg, #4a9c4e, #6bc66f);
+}
+
+.progress-neo {
+  background: linear-gradient(90deg, #3d8b8b, #5bb5b5);
+}
+
+.progress-axi {
+  background: linear-gradient(90deg, #c9a227, #e6c84a);
+}
+
+.progress-requiem {
+  background: linear-gradient(90deg, #b33636, #d65555);
+}
+
+.progress-omnia {
+  background: linear-gradient(90deg, #8b5bb5, #a87fd4);
+}
+
+/* Faction colors */
+.faction-grineer {
+  background: linear-gradient(180deg, rgba(200, 50, 50, 0.3), rgba(200, 50, 50, 0.1));
+  border-left: 3px solid #c83232;
+}
+
+.faction-corpus {
+  background: linear-gradient(180deg, rgba(50, 150, 200, 0.3), rgba(50, 150, 200, 0.1));
+  border-left: 3px solid #3296c8;
+}
+
+.faction-infestation {
+  background: linear-gradient(180deg, rgba(100, 200, 100, 0.3), rgba(100, 200, 100, 0.1));
+  border-left: 3px solid #64c864;
+}
